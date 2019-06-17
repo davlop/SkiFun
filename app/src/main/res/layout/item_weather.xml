@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="item"
+                  type="com.davlop.skifun.data.model.WeatherItem"/>
+        <import type="com.davlop.skifun.utils.WeatherUtilsKt"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Weather Icon -->
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="@dimen/weather_icon_dimen"
+            android:layout_height="@dimen/weather_icon_dimen"
+            android:layout_marginTop="@dimen/item_top_margin"
+            android:paddingStart="8dp"
+            android:src="@{WeatherUtilsKt.getWeatherIcon(item.weather, context)}"/>
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/weather_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/default_left_margin"
+            android:paddingLeft="@dimen/default_left_margin"
+            android:paddingTop="@dimen/item_top_margin"
+            android:textStyle="bold"
+            android:textSize="@dimen/city_name_text_size"
+            android:text="@{WeatherUtilsKt.getWeatherTimeFormatted(item.time, context)}"
+            tools:text="Today at 21:00"/>
+
+        <!-- Weather -->
+        <TextView
+            android:id="@+id/weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weather_time"
+            android:paddingStart="@dimen/default_left_margin"
+            android:paddingLeft="@dimen/default_left_margin"
+            android:textSize="@dimen/default_text_size"
+            android:text="@{WeatherUtilsKt.getWeatherInLocalLanguage(item.weather, context)}"
+            tools:text="Drizzle"/>
+
+        <!-- Weather Description -->
+        <TextView
+            android:id="@+id/weather_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weather"
+            android:paddingStart="@dimen/default_left_margin"
+            android:paddingLeft="@dimen/default_left_margin"
+            android:textSize="12sp"
+            android:text="@{WeatherUtilsKt.getWeatherInLocalLanguage(item.weatherDescription, context)}"
+            tools:text="light intensity drizzle"/>
+
+        <!-- Temperature -->
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/item_top_margin"
+            android:paddingRight="@dimen/temperature_right_padding"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textSize="@dimen/temperature_text_size"
+            android:text="@{WeatherUtilsKt.getTemperatureFormatted(item.temperature)}"
+            tools:text="21°"/>
+
+    </RelativeLayout>
+
+</layout>

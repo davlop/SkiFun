@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name" translatable="false">SkiFun</string>
+    <string name="title_activity_map">SkiFun</string>
+    <string name="extra_key_resortname" translatable="false">ResortName</string>
+    <string name="extra_key_resortpistesimage" translatable="false">PistesImage</string>
+    <string name="extra_key_resortId" translatable="false">ResortId</string>
+    <string name="extra_key_parentId" translatable="false">ParentId</string>
+    <string name="loading_pistes_image">Loading pistes image…</string>
+    <string name="error_unknown">Unknown error</string>
+    <string name="error_no_pistes_found">Unfortunately, no pistes found for this resort</string>
+    <string name="time_today">Today at </string>
+    <string name="time_tomorrow">Tomorrow at </string>
+    <string name="last_updated">Last update on: </string>
+    <string name="image_saved">Image saved!</string>
+    <string name="image_failed">Image download failed</string>
+    <string name="address">Address:</string>
+    <string name="no_address">No address found</string>
+    <string name="loading_hotels">Loading hotels…</string>
+    <string name="adults">Adults</string>
+    <string name="children">Children</string>
+    <string name="price_rates">Daily price</string>
+    <string name="elevation">Elevation</string>
+    <string name="not_available">Not available</string>
+    <string name="no_elevation">Elevation not available</string>
+    <string name="no_phone">Phone not available</string>
+    <string name="no_price">Price rates not available</string>
+    <string name="no_website">Website not available</string>
+    <string name="trails">Trails</string>
+    <string name="no_trails">Trails information not available</string>
+    <string name="no_internet">Couldn\'t load map. No internet connection</string>
+
+    <!-- Weather responses from Openweathermap API-->
+    <string name="atmosphere">Atmosphere</string>
+    <string name="broken_clouds">Broken clouds</string>
+    <string name="clear">Clear</string>
+    <string name="clear_sky">Clear sky</string>
+    <string name="clouds">Clouds</string>
+    <string name="drizzle">Drizzle</string>
+    <string name="drizzle_rain">Drizzle rain</string>
+    <string name="dust">Dust</string>
+    <string name="extreme_rain">Extreme rain</string>
+    <string name="few_clouds">Few clouds</string>
+    <string name="fog">Fog</string>
+    <string name="freezing_rain">Freezing rain</string>
+    <string name="haze">Haze</string>
+    <string name="heavy_intensity_drizzle">Heavy intensity drizzle</string>
+    <string name="heavy_intensity_drizzle_rain">Heavy intensity drizzle rain</string>
+    <string name="heavy_intensity_rain">Heavy intensity rain</string>
+    <string name="heavy_intensity_shower_rain">Heavy intensity shower rain</string>
+    <string name="heavy_shower_rain_and_drizzle">Heavy shower rain and drizzle</string>
+    <string name="heavy_shower_snow">Heavy shower snow</string>
+    <string name="heavy_snow">Heavy snow</string>
+    <string name="heavy_thunderstorm">Heavy thunderstorm</string>
+    <string name="light_intensity_drizzle">Light intensity drizzle</string>
+    <string name="light_intensity_drizzle_rain">Light intensity drizzle rain</string>
+    <string name="light_intensity_shower_rain">Light intensity shower rain</string>
+    <string name="light_rain">Light rain</string>
+    <string name="light_rain_and_snow">Light rain and snow</string>
+    <string name="light_shower_snow">Light shower snow</string>
+    <string name="light_snow">Light snow</string>
+    <string name="light_thunderstorm">Light thunderstorm</string>
+    <string name="mist">Mist</string>
+    <string name="moderate_rain">Moderate rain</string>
+    <string name="overcast_clouds">Overcast clouds</string>
+    <string name="ragged_shower_rain">Ragged shower rain</string>
+    <string name="ragged_thunderstorm">Ragged thunderstorm</string>
+    <string name="rain">Rain</string>
+    <string name="rain_and_snow">Rain and snow</string>
+    <string name="sand">Sand</string>
+    <string name="sand_and_dust_whirls">Sand and dust whirls</string>
+    <string name="scattered_clouds">Scattered clouds</string>
+    <string name="shower_drizzle">Shower drizzle</string>
+    <string name="shower_rain">Shower rain</string>
+    <string name="shower_rain_and_drizzle">Shower rain and drizzle</string>
+    <string name="shower_sleet">Shower sleet</string>
+    <string name="shower_snow">Shower snow</string>
+    <string name="sleet">Sleet</string>
+    <string name="smoke">Smoke</string>
+    <string name="snow">Snow</string>
+    <string name="squalls">Squalls</string>
+    <string name="thunderstorm">Thunderstorm</string>
+    <string name="thunderstorm_with_drizzle">Thunderstorm with drizzle</string>
+    <string name="thunderstorm_with_heavy_drizzle">Thunderstorm with heavy drizzle</string>
+    <string name="thunderstorm_with_heavy_rain">Thunderstorm with heavy rain</string>
+    <string name="thunderstorm_with_light_drizzle">Thunderstorm with light drizzle</string>
+    <string name="thunderstorm_with_light_rain">Thunderstorm with light rain</string>
+    <string name="thunderstorm_with_rain">Thunderstorm with rain</string>
+    <string name="tornado">Tornado</string>
+    <string name="very_heavy_rain">Very heavy rain</string>
+    <string name="volcanic_ash">Volcanic ash</string>
+</resources>

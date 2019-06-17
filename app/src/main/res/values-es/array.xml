@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="months">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+    </string-array>
+    <string-array name="day_times">
+        <item>Mañana</item>
+        <item>Tarde</item>
+        <item>Noche</item>
+    </string-array>
+    <string-array name="resort_tabs">
+        <item>Hoteles</item>
+        <item>Pistas</item>
+        <item>Tiempo</item>
+    </string-array>
+    <string-array name="trail_levels">
+        <item>Fácil</item>
+        <item>Medio</item>
+        <item>Difícil</item>
+        <item>Experto</item>
+    </string-array>
+</resources>

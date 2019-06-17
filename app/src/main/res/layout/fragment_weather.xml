@@ -1,0 +1,28 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context="com.davlop.skifun.ui.resort.weather.WeatherFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/weather_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/update_height"
+        android:background="@android:color/darker_gray"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/update_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:textSize="@dimen/update_tv_text_size"/>
+    </FrameLayout>
+
+</FrameLayout>

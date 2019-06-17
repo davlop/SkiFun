@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="item"
+                  type="com.davlop.skifun.data.model.ResortSkiPlace"/>
+        <import type="com.davlop.skifun.utils.ResortInfoUtilsKt"/>
+    </data>
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context="com.davlop.skifun.ui.resort.resorts.ResortsFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Pistes map -->
+            <HorizontalScrollView
+                android:id="@+id/pistes_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pistes_map_height"
+                android:fillViewport="true">
+                <com.github.chrisbanes.photoview.PhotoView
+                    android:id="@+id/pistes_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"/>
+
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pistes_map_height">
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:indeterminate="true"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/error_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progress_bar"
+                    android:textAlignment="center"
+                    android:text="@string/loading_pistes_image"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <!-- Download icon -->
+            <ImageView
+                android:id="@+id/download_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_download"
+                android:visibility="invisible"/>
+
+            <!-- Resort Info -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pistes_view">
+
+                <!-- Trails -->
+                <ImageView
+                    android:id="@+id/trails_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:paddingStart="@dimen/resort_icons_left_margin"
+                    android:paddingTop="@dimen/default_margin"
+                    android:src="@drawable/ic_trails"/>
+
+                <LinearLayout
+                    android:id="@+id/trails_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp">
+                    <TextView
+                        android:id="@+id/trails_legend"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="12dp"
+                        android:layout_marginStart="48dp"/>
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/trails_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/no_trails_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/resort_info_tv_height"
+                    android:layout_toEndOf="@id/trails_icon"
+                    android:paddingStart="@dimen/default_margin"
+                    android:paddingTop="@dimen/default_margin"
+                    android:text="@string/no_trails"/>
+
+                <!-- Elevation -->
+                <ImageView
+                    android:id="@+id/elevation_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/resort_info_tv_height"
+                    android:layout_below="@+id/trails_icon"
+                    android:paddingStart="@dimen/resort_icons_left_margin"
+                    android:paddingTop="@dimen/default_margin"
+                    android:src="@drawable/ic_elevation"/>
+
+                <TextView
+                    android:id="@+id/elevation_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/resort_info_tv_height"
+                    android:layout_below="@+id/trails_view"
+                    android:layout_toEndOf="@+id/elevation_icon"
+                    android:paddingStart="@dimen/default_margin"
+                    android:paddingTop="@dimen/default_margin"
+                    android:text="@{ResortInfoUtilsKt.getElevationFormatted(item.elevation_low, item.elevation_high, context)}"
+                    tools:text="Elevation: 1300-2600m"/>
+
+                <!-- Price -->
+                <ImageView
+                    android:id="@+id/price_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/resort_info_tv_height"
+                    android:layout_below="@+id/elevation_icon"
+                    android:paddingStart="@dimen/resort_icons_left_margin"
+                    android:paddingTop="@dimen/default_margin"
+                    android:src="@drawable/ic_price"/>
+
+                <TextView
+                    android:id="@+id/price_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/resort_info_tv_height"
+                    android:layout_below="@+id/elevation_icon"
+                    android:layout_toEndOf="@+id/elevation_icon"
+                    android:paddingStart="@dimen/default_margin"
+                    android:paddingTop="@dimen/default_margin"
+                    android:text="@{ResortInfoUtilsKt.getPriceFormatted(item.price_adults, item.price_kids, context)}"
+                    tools:text="Adults: 45€ Children: 30€"/>
+
+                <!-- Lifts -->
+
+                <!-- Website -->
+                <ImageView
+                    android:id="@+id/website_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/resort_info_tv_height"
+                    android:layout_below="@+id/price_icon"
+                    android:paddingStart="@dimen/resort_icons_left_margin"
+                    android:paddingTop="@dimen/default_margin"
+                    android:src="@drawable/ic_website"/>
+
+                <TextView
+                    android:id="@+id/website_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/resort_info_tv_height"
+                    android:layout_below="@+id/price_tv"
+                    android:layout_toEndOf="@+id/elevation_icon"
+                    android:paddingStart="@dimen/default_margin"
+                    android:paddingTop="@dimen/default_margin"
+                    android:autoLink="web"
+                    android:text="@{ResortInfoUtilsKt.getWebsiteFormatted(item.website, context)}"
+                    tools:text="https://123.com"/>
+
+                <!-- Phone -->
+                <ImageView
+                    android:id="@+id/phone_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/resort_info_tv_height"
+                    android:layout_below="@+id/website_icon"
+                    android:paddingStart="@dimen/resort_icons_left_margin"
+                    android:paddingTop="@dimen/default_margin"
+                    android:src="@drawable/ic_phone"/>
+
+                <TextView
+                    android:id="@+id/phone_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/resort_info_tv_height"
+                    android:layout_below="@id/website_tv"
+                    android:layout_toEndOf="@+id/phone_icon"
+                    android:paddingStart="@dimen/default_margin"
+                    android:paddingTop="@dimen/default_margin"
+                    android:autoLink="phone"
+                    android:text="@{ResortInfoUtilsKt.getPhoneFormatted(item.phone, context)}"
+                    tools:text="+123456789"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</layout>
