@@ -34,6 +34,8 @@ More to come...
 - Room for data persistence
 - Retrofit to consume OpenWeatherMap API and get weather information
 - RxJava 2 for multi-threading and reactive operators
+- Firebase Cloud Firestore to store resort information
+- Firebase Cloud Storage to store trail maps images
 - Glide to display images
 - Android Data Binding in XML
 - Implemented a way to download trail maps
