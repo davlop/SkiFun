@@ -39,4 +39,5 @@ More to come...
 - Implemented a way to download trail maps
 - Display resorts as markers in Google Maps
 - Accomodation obtained from Google Places API and displayed in Google Maps
+- Added a CI/CD pipeline using CircleCI and Fastlane (in private Bitbucket repository)
 - 🇪🇸 Spanish version too!
